@@ -9,13 +9,12 @@ import Login from "./Login";
 import Checkout from "./Checkout";
 
 function App() {
-  const [{}, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue(); // eslint-disable-line no-empty-pattern
 
   useEffect(() => {
     // will only run once when the app component loads...
 
     auth.onAuthStateChanged((authUser) => {
-      console.log("User: ", authUser);
 
       if (authUser) {
         // the user just loggedin / the user was loggedin
@@ -31,7 +30,7 @@ function App() {
         });
       }
     });
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return (
     // BEM convetion
     <Router>
