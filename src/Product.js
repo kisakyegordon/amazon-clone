@@ -3,7 +3,7 @@ import { useStateValue } from "./StateProvider";
 import "./Product.css";
 
 function Product({ id, title, image, price, rating }) {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{}, dispatch] = useStateValue(); // eslint-disable-line no-empty-pattern
   const addToBasket = () => {
     // dispatch item into the data layer
     dispatch({
