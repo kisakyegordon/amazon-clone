@@ -5,7 +5,7 @@ import Order from "./Order";
 import "./Orders.css";
 
 function Orders() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue(); // eslint-disable-line
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {

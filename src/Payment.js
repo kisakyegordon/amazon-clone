@@ -43,7 +43,7 @@ function Payment() {
     event.preventDefault();
     setProcessing(true);
 
-    const payload = await stripe
+    const payload = await stripe // eslint-disable-line
       .confirmCardPayment(clientSecret, {
         payment_method: {
           card: elements.getElement(CardElement),
